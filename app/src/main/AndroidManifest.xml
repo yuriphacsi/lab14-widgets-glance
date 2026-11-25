@@ -23,7 +23,12 @@
             </intent-filter>
         </activity>
 
-        <!-- AQUÍ ESTÁ EL NUEVO RECEIVER DEL WIDGET -->
+        <!-- AGREGA ESTA ACTIVITY AQUÍ -->
+        <activity
+            android:name=".WorkActivity"
+            android:exported="false" />
+
+        <!-- Receiver del Widget -->
         <receiver
             android:name=".SimpleWidgetReceiver"
             android:exported="true">
