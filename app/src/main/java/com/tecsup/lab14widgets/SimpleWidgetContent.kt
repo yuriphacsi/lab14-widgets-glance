@@ -1,6 +1,7 @@
 package com.tecsup.lab14widgets
 
 import android.content.Context
+import android.content.Intent
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.unit.dp
 import androidx.glance.Button
@@ -22,13 +23,13 @@ class SimpleWidgetContent : GlanceAppWidget() {
     override suspend fun provideGlance(context: Context, id: GlanceId) {
         provideContent {
             GlanceTheme {
-                MyContent()
+                MyContent(context)
             }
         }
     }
 
     @Composable
-    private fun MyContent() {
+    private fun MyContent(context: Context) {
         Column(
             modifier = GlanceModifier.fillMaxSize()
                 .background(GlanceTheme.colors.background),
